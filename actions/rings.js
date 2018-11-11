@@ -7,7 +7,7 @@ module.exports = {
   ,
   draw: (rings, ctx) => {
     rings.forEach(ring => {
-      ctx.fillStyle = `rgb(138, 43, 226, ${(100 - ring.size)/100})`
+      ctx.fillStyle = `hsl(${ring.size}, 100%, 50%, ${(100 - ring.size)/100})`
       ctx.fillRect(ring.x - (ring.size/2), ring.y - (ring.size/2), ring.size, ring.size)
     })
     return rings
