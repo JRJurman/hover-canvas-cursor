@@ -12,5 +12,7 @@ engine.addActions({
 })
 
 engine.actions.initDraw()
-window.onmousemove = event => engine.actions.moveCursor({x: event.x, y: event.y})
-window.onclick = event => engine.actions.newRing({x: event.x, y: event.y, size: 5})
+window.onmousemove = event => {
+  engine.actions.moveCursor({x: event.x, y: event.y})
+  engine.actions.newRing({x: event.x, y: event.y, size: 5})
+}
